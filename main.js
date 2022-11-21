@@ -1,6 +1,53 @@
 window.addEventListener('DOMContentLoaded', main);
 
 function main() {
+    loadStartScene();
+}
+
+function loadStartScene() {
+    const container = document.createElement("div");
+    const h1 = document.createElement("h1");
+    const p = document.createElement("p");
+    const button1 = document.createElement("button");
+
+    container.classList = ("container");
+
+    h1.textContent = "Welcome";
+    p.textContent = "Oh no, we have a big problem. You overslept and have to get to that important meeting in asap. Before we begin, enter your name."
+    button1.textContent = "Let's Begin!";
+    button1.onclick = loadFirstScene;
+    
+    document.body.innerHTML = "";
+    document.body.append(container, h1, p, button1);
+}
+
+function loadFirstScene() {
+
+    console.log("hello");
+    
+    const container = document.createElement("div");
+    const h1 = document.createElement("h1");
+    const p = document.createElement("p");
+    const button1 = document.createElement("button");
+    const button2 = document.createElement("button");
+
+
+    container.classList = ("container");
+
+    h1.textContent = "First Scene";
+    p.textContent = "You get dressed in a hurry. You leave the apartment. Should you run to the bus or call a taxi?"
+    button1.textContent = "Run to the bus";
+    button1.onclick = loadSecondScene;
+    
+    button2.textContent = "Call a taxi";
+    button2.onclick = loadThirdScene;
+    
+    document.body.append(container, h1, p, button1, button2);
+}
+
+
+/*
+function main() {
     getHtmlElements();
     loadStartScene();
 }
@@ -10,7 +57,7 @@ function getHtmlElements() {
     let h1 = document.getElementById("h1");
     let text = document.getElementById("text");
     let buttonOptionOne = document.getElementById("buttonOne");
-    /*let input = document.getElementById("username");*/
+    let input = document.getElementById("username");
 }
 
 function loadStartScene() {
@@ -59,4 +106,5 @@ function loadThirdScene() {
     buttonOptionOne.textContent = "Start over";
 
     buttonOptionOne.onclick = loadStartScene;
-}
+} */ 
+
