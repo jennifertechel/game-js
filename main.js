@@ -11,6 +11,7 @@ const input = document.createElement("input");
 const button1 = document.createElement("button");
 const button2 = document.createElement("button");
 
+
 function createHtmlElements() {
 }
 
@@ -69,13 +70,26 @@ function loadCoffeeScene() {
 }
 
 function loadOfficeScene() {
-    console.log("Office Scene");
+    
+    h1.textContent = "At the office";
+    p.textContent = "You made it to the office. You run into your boss in the elevator. She notices you're flustered and confronts you about it. Do you make up a lie or tell the truth about this morning's chaos?";
+
+    button1.textContent = "Make up a lie";
+    button1.onclick = loadBossScene;
+
+    button2.textContent = "Be honest";
+    button2.onclick = loadEndScene;
+
+    const container = document.getElementById("container");
+    container.innerHTML = "";
+    container.append(h1, p, button1, button2);
 }
 
 function loadToiletScene() {
 
     h1.textContent = "Oh no.."
     p.textContent = "Woops. In all the haste you drop your phone in the toilet, with all the important information for the meeting. You have no choice but to admit defeat. This day is not happening.";
+    
     button1.textContent = "Start over";
     button1.onclick = loadStartScene;
 
@@ -96,7 +110,32 @@ function loadShirtScene() {
     container.append(h1, p, button1);
 }
 
+function loadBossScene() {
 
+    h1.textContent = "Liar liar..";
+    p.textContent = "Your boss doesn't buy your made-up excuse, and tells you not to bother with the meeting. Honesty lasts longer..";
+
+    button1.textContent = "Start over";
+    button1.onclick = loadStartScene;
+
+    const container = document.getElementById("container");
+    container.innerHTML = "";
+    container.append(h1, p, button1);
+
+}
+
+function loadEndScene() {
+    
+    h1.textContent = "Congratulations!"
+    p.textContent = "Your boss appreciates your honesty and laughs at the situation. She wishes you best of luck on the meeting and you enter the conference room with newfound conficende. Puh, what a day."
+
+    button1.textContent = "Return to start";
+    button1.onclick = loadStartScene;
+
+    const container = document.getElementById("container");
+    container.innerHTML = "";
+    container.append(h1, p, button1);
+}
 
 
 /*
