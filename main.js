@@ -23,8 +23,8 @@ let username = "";
 /** Function that loads and displays welcome/get started-message,  */
 function loadStartScene() {
 
-    h1.textContent = "Welcome";
-    p.textContent = "Oh no, we have a big problem. You overslept and have to get to that important meeting in asap. Before we begin, enter your name."
+    h1.textContent = "Welcome to Sleepyhead Chaos";
+    p.textContent = "Oh no, you overslept and have to get to an important meeting asap. Can you make it to the office in time? Before we begin, enter your name."
     input.type = "text";
     input.placeholder = "Enter your name";
     button1.textContent = "Let's Begin!";
@@ -46,7 +46,7 @@ function saveUsername() {
 function loadTransportScene() {
     
     h1.textContent = "Hello " + username;
-    p.textContent = "You get dressed in a hurry. You leave the apartment. Should you run to the bus or call a taxi?"
+    p.textContent = "You get dressed in a hurry. You're about to leave the apartment. Should you run to the bus or call a taxi?";
     button1.textContent = "Run to the bus";
     button1.onclick = loadCoffeeScene;
     
@@ -56,7 +56,6 @@ function loadTransportScene() {
     const container = document.getElementById("container");
     container.innerHTML = "";
     container.append(h1, p, button1, button2);
-
 }
 
 /** Function that loads and displays a new message for the third scene, including two options with click-events */
@@ -137,7 +136,7 @@ function loadBossScene() {
 /** Function that loads and displays a new message for the final scene, and a return option */
 function loadEndScene() {
     
-    h1.textContent = "Congratulations!"
+    h1.textContent = "Congratulations " + username + "!";
     p.textContent = "Your boss appreciates your honesty and laughs at the situation. She wishes you best of luck on the meeting and you enter the conference room with newfound conficende. Puh, what a day."
 
     button1.textContent = "Return to start";
