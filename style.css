@@ -1,5 +1,6 @@
 body {
-    margin: 0;    
+    margin: 0;   
+    font-family: 'Indie Flower'; 
 }
 
 #container-wrapper {
@@ -14,13 +15,19 @@ body {
     width: 50%;
 }
 
+h1 {
+    text-transform: uppercase;
+}
 input {
     padding: 0.5rem 1rem;
+    font-family: 'Indie Flower';
 
 }
 
 button {
     padding: 0.5rem 1rem;
     margin: 1rem;
+    font-family: 'Indie Flower';
+
 }
 
