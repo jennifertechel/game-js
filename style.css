@@ -8,11 +8,16 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    
 }
 
 #container {
     text-align: center;
     width: 50%;
+    background-color: white;
+    padding: 5rem;
+    border-radius: 10px;
 }
 
 h1 {
@@ -28,6 +33,14 @@ button {
     padding: 0.5rem 1rem;
     margin: 1rem;
     font-family: 'Indie Flower';
+    border-radius: 10px;
+    border-color: black;
+    border-width: 1px;
 
 }
 
+button:hover {
+    color: white;
+    background-color: black;
+
+}
