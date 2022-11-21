@@ -1,17 +1,24 @@
 window.addEventListener('DOMContentLoaded', main);
 
+/** Function calling on function for the starting scene */
 function main() {
     loadStartScene();
 }
 
+/** @type {HTMLHeadingElement} creating h1-tag to display scene heading */
 const h1 = document.createElement("h1");
+/** @type {HTMLParagraphElement} creating p-tag to display scene message */
 const p = document.createElement("p");
+/** @type {HTMLInputElement} creating input for user to enter their name */
 const input = document.createElement("input");
+/** @type {HTMLButtonElement} creating button for option number one in scenes */
 const button1 = document.createElement("button");
+/** @type {HTMLButtonElement} creating button for option number two in scenes  */
 const button2 = document.createElement("button");
 
 let username = "";
 
+/** Function that loads and displays welcome/get started-message,  */
 function loadStartScene() {
 
     h1.textContent = "Welcome";
@@ -26,13 +33,14 @@ function loadStartScene() {
     container.append(h1, p, input, button1);
 }
 
+/** Function that saves username in a variable, and redirects to next scene */
 function saveUsername() {
     username = input.value;
     input.value = "";
     loadTransportScene();
-    console.log(username);
 }
 
+/** Function that loads and displays a new message for the first scene, including two options with click-events*/
 function loadTransportScene() {
     
     h1.textContent = "Hello " + username;
@@ -49,6 +57,7 @@ function loadTransportScene() {
 
 }
 
+/** Function that loads and displays a new message for the third scene, including two options with click-events */
 function loadCoffeeScene() {
 
     h1.textContent = "Yay!";
@@ -64,6 +73,7 @@ function loadCoffeeScene() {
     container.append(h1, p, button1, button2);
 }
 
+/** Function that loads and displays a new message for the fourth scene, including two options with click-events */
 function loadOfficeScene() {
     
     h1.textContent = "At the office";
@@ -80,6 +90,7 @@ function loadOfficeScene() {
     container.append(h1, p, button1, button2);
 }
 
+/** Function that loads and displays a new message for a dead-end scene, and a return option */
 function loadToiletScene() {
 
     h1.textContent = "Oh no.."
@@ -93,6 +104,7 @@ function loadToiletScene() {
     container.append(h1, p, button1);
 }
 
+/** Function that loads and displays a new message for a dead-end scene, and a return option */
 function loadShirtScene() {
 
     h1.textContent = "Almost..."
@@ -105,6 +117,7 @@ function loadShirtScene() {
     container.append(h1, p, button1);
 }
 
+/** Function that loads and displays a new message for a dead-end scene, and a return option */
 function loadBossScene() {
 
     h1.textContent = "Liar liar..";
@@ -119,6 +132,7 @@ function loadBossScene() {
 
 }
 
+/** Function that loads and displays a new message for the final scene, and a return option */
 function loadEndScene() {
     
     h1.textContent = "Congratulations!"
