@@ -11,5 +11,16 @@ body {
 
 #container {
     text-align: center;
+    width: 50%;
+}
+
+input {
+    padding: 0.5rem 1rem;
+
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
 }
 
