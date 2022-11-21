@@ -9,7 +9,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
-    
 }
 
 #container {
@@ -23,10 +22,10 @@ body {
 h1 {
     text-transform: uppercase;
 }
+
 input {
     padding: 0.5rem 1rem;
     font-family: 'Indie Flower';
-
 }
 
 button {
@@ -36,11 +35,9 @@ button {
     border-radius: 10px;
     border-color: black;
     border-width: 1px;
-
 }
 
 button:hover {
     color: white;
     background-color: black;
-
 }
