@@ -1,3 +1,4 @@
+/** Event that waits for HTML document to loaded before executing main function */
 window.addEventListener('DOMContentLoaded', main);
 
 /** Function calling on function for the starting scene */
@@ -16,6 +17,7 @@ const button1 = document.createElement("button");
 /** @type {HTMLButtonElement} creating button for option number two in scenes  */
 const button2 = document.createElement("button");
 
+/** Variable to hold input from user */
 let username = "";
 
 /** Function that loads and displays welcome/get started-message,  */
